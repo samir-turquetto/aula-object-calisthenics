@@ -13,8 +13,14 @@ namespace ObjectCalisthenics
             
             try
             {
-                var pessoa = new Pessoa("89828707500", "TESTE 1");
-                Console.WriteLine(pessoa.GetDocumento());
+                var pessoa = new Pessoa("89828707500", "PESSOA TESTE 1");
+                var produto = new Produto("PRODUTO TESTE 1", 99.90m);
+                var transacao = new Transacao(pessoa);
+
+                transacao.AdicionarProduto(produto);
+                transacao.AdicionarProduto(produto);
+
+                Console.WriteLine($"Valor Total Transação: {transacao.GetTotalTransacao()}");
             }
             catch(ArgumentException ex)
             {

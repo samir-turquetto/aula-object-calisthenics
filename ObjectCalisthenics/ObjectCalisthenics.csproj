@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Documento.cs" />
+    <Compile Include="ListaDeProdutos.cs" />
     <Compile Include="Pessoa.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transacao.cs" />
     <Compile Include="ValidarDocumento.cs" />
   </ItemGroup>
   <ItemGroup>
