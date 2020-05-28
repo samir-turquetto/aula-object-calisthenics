@@ -9,15 +9,18 @@ namespace ObjectCalisthenics
     internal class Pessoa
     {
         private Documento Documento { get; set; }
-        public string Nome { get; private set; }
+        private NomePessoa Nome { get; set; }
 
         public Pessoa(string documento, string nome)
         {
             Documento = new Documento(documento);
-            Nome = nome;
+            Nome = new NomePessoa(nome);
         }
 
         public string GetDocumento()
             => Documento.ValorDocumento;
+
+        public string GetNomePessoa()
+            => Nome.Valor;
     }
 }

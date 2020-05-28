@@ -18,8 +18,8 @@ namespace ObjectCalisthenics
                 var transacao = new Transacao(pessoa);
 
                 transacao.AdicionarProduto(produto);
-                transacao.AdicionarProduto(produto);
 
+                Console.WriteLine($"Transação para o cliente: {transacao.GetNomePessoa()}");
                 Console.WriteLine($"Valor Total Transação: {transacao.GetTotalTransacao()}");
             }
             catch(ArgumentException ex)
