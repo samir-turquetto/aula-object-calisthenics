@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ObjectCalisthenics</RootNamespace>
     <AssemblyName>ObjectCalisthenics</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DescricaoProduto.cs" />
     <Compile Include="Documento.cs" />
     <Compile Include="ListaDeProdutos.cs" />
     <Compile Include="NomePessoa.cs" />
@@ -52,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transacao.cs" />
     <Compile Include="ValidarDocumento.cs" />
+    <Compile Include="ValorProduto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

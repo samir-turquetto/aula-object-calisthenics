@@ -25,7 +25,10 @@ namespace ObjectCalisthenics
         public void AdicionarProduto(Produto produto)
             => Produtos.Add(produto);
 
+        public void ListarProdutos()
+            => Produtos.ForEach(x => x.ImprimeProduto());
+
         public decimal GetTotalTransacao()
-            => Produtos.Sum(x => x.Valor);
+            => Produtos.Sum(x => x.GetValorProduto());
     }
 }

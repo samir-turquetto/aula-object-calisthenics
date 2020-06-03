@@ -9,14 +9,24 @@ namespace ObjectCalisthenics
     internal class Produto
     {
         public Guid Id { get; private set; }
-        public string Descricao { get; private set; }
-        public decimal Valor { get; private set; }
+        private DescricaoProduto Descricao { get; set; }
+        private ValorProduto Valor { get; set; }
 
         public Produto(string descricao, decimal valor)
         {
             Id = Guid.NewGuid();
-            Descricao = descricao;
-            Valor = valor;
+            Descricao = new DescricaoProduto(descricao);
+            Valor = new ValorProduto(valor);
         }
+
+        public string GetDescricaoProduto() 
+            => Descricao.Valor;
+
+        public decimal GetValorProduto()
+            => Valor.Valor;
+
+        public void ImprimeProduto()
+            => Console.WriteLine($"Descrição: {GetDescricaoProduto()} \n Valor: {GetValorProduto()}");
+        
     }
 }
